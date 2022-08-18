@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador</title>
+    <link rel="shortcut icon" href="imagenes/favicon_llave_con_candado.ico" />
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <main class="contenedor">
+        <img src="./imagenes/logo.svg" alt="logo de Alura">
+
+        <section class="seccionDeIngresoDeDatos">
+
+            <input type="text" id="textoIngresado" placeholder="Ingrese el texto">
+
+            <div class="ContenedorDeBotones">
+                <button type="button" class="Boton" id="botonEncriptar">Encriptar</button>
+                <button type="button" class="Boton" id="botonDesencriptar">Desencriptar</button>
+                <button type="button" class="Boton" id="botonCopiar">Copiar</button>
+            </div>
+
+        </section>
+
+        <section class="seccionDeRespuesta">
+            <img id="imagen-seccionDeRespuesta" src="./imagenes/macaco.svg" alt="Muñeco con lupa" width="300px">
+            <textarea name="resultado" id="textoFinal" cols="30"
+                rows="10">La salida de texto se mostrará aquí</textarea>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer">Agustín Miranda (Oracle ONE - Alura Latam)</p>
+    </footer>
+</body>
+
+<script>
+    var boton1 = document.querySelector("#botonEncriptar");
+    boton1.onclick = encriptar;
+
+    var boton2 = document.querySelector("#botonDesencriptar");
+    boton2.onclick = desencriptar;
+
+    var boton3 = document.querySelector("#botonCopiar");
+    boton3.onclick = copiar;
+</script>
+
+</html>
